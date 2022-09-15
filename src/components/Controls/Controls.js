@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Controls.css';
 
-export default function Controls({ helmet, setHelmet, jersey, setJersey }) {
+export default function Controls({ helmet, setHelmet, jersey, setJersey, pants, setPants }) {
   return (
     <div className="controls">
       <label>Helmet</label>
@@ -18,10 +18,10 @@ export default function Controls({ helmet, setHelmet, jersey, setJersey }) {
         <option value="classic">Classic</option>
       </select>
       <label>Pants</label>
-      <select>
-        <option>White</option>
-        <option>Blue</option>
-        <option>Orange</option>
+      <select value={pants} onChange={(e) => setPants(e.target.value)}>
+        <option value="white">White</option>
+        <option value="blue">Blue</option>
+        <option value="orange">Orange</option>
       </select>
     </div>
   );
