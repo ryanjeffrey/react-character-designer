@@ -8,11 +8,12 @@ import './Main.css';
 
 export default function Main() {
   const [helmet, setHelmet] = useState('blue');
+  const [jersey, setJersey] = useState('home');
 
   return (
     <main>
-      <Controls helmet={helmet} setHelmet={setHelmet} />
-      <Player helmet={helmet} />
+      <Controls helmet={helmet} setHelmet={setHelmet} jersey={jersey} setJersey={setJersey} />
+      <Player helmet={helmet} jersey={jersey} />
       <Stats />
       <Slogan />
     </main>
