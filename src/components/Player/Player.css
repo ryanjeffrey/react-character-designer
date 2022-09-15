@@ -3,11 +3,11 @@ img {
     width: fit-content;
 }
 
-img:nth-child(1) {
+.helmet {
     height: 120px;
 }
 
-img:nth-child(3) {
+.pants {
     margin-top: -30px;
     padding-right: 5px;
     height: 340px;
