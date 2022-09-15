@@ -13,14 +13,3 @@ label {
     margin-bottom: -20px;
     font-weight: bold;
 }
-
-form {
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-}
-
-button {
-    margin-top: 10px;
-    cursor: pointer;
-}

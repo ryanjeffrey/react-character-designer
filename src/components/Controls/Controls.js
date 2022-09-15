@@ -23,10 +23,6 @@ export default function Controls() {
         <option>Blue</option>
         <option>Orange</option>
       </select>
-      <form>
-        <input name='slogan' type='text' placeholder='Bear Down!'></input>
-        <button>Add Slogan</button>
-      </form>
     </div>
   );
 }
