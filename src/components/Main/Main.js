@@ -13,6 +13,7 @@ export default function Main() {
   const [helmetCount, setHelmetCount] = useState(0);
   const [jerseyCount, setJerseyCount] = useState(0);
   const [pantsCount, setPantsCount] = useState(0);
+  const [slogans, setSlogans] = useState(['Bear Down!']);
 
   const handleChange = (type, value) => {
     if (type === 'helmet'){
@@ -31,15 +32,15 @@ export default function Main() {
 
   return (
     <main>
-      <Controls
-        helmet={helmet}
-        jersey={jersey}
-        pants={pants}
-        handleChange={handleChange}
-      />
+      <Controls helmet={helmet} jersey={jersey} pants={pants} handleChange={handleChange} />
       <Player helmet={helmet} jersey={jersey} pants={pants} />
-      <Stats helmetCount={helmetCount} jerseyCount={jerseyCount} pantsCount={pantsCount} />
-      <Slogan />
+      <Stats
+        helmetCount={helmetCount}
+        jerseyCount={jerseyCount}
+        pantsCount={pantsCount}
+        slogans={slogans}
+      />
+      <Slogan setSlogans={setSlogans} />
     </main>
   );
 }
