@@ -10,19 +10,35 @@ export default function Main() {
   const [helmet, setHelmet] = useState('blue');
   const [jersey, setJersey] = useState('home');
   const [pants, setPants] = useState('white');
+  const [helmetCount, setHelmetCount] = useState(0);
+  const [jerseyCount, setJerseyCount] = useState(0);
+  const [pantsCount, setPantsCount] = useState(0);
+
+  const handleChange = (type, value) => {
+    if (type === 'helmet'){
+      setHelmet(value);
+      setHelmetCount(helmetCount + 1);
+    }
+    if (type === 'jersey'){
+      setJersey(value);
+      setJerseyCount(jerseyCount + 1);
+    }
+    if (type === 'pants'){
+      setPants(value);
+      setPantsCount(pantsCount + 1);
+    }
+  };
 
   return (
     <main>
       <Controls
         helmet={helmet}
-        setHelmet={setHelmet}
         jersey={jersey}
-        setJersey={setJersey}
         pants={pants}
-        setPants={setPants}
+        handleChange={handleChange}
       />
       <Player helmet={helmet} jersey={jersey} pants={pants} />
-      <Stats />
+      <Stats helmetCount={helmetCount} jerseyCount={jerseyCount} pantsCount={pantsCount} />
       <Slogan />
     </main>
   );
