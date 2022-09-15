@@ -1,10 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500&display=swap');
+
 form {
     margin-top: 100px;
     display: flex;
     flex-direction: column;
 }
 
+input {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
 button {
     margin-top: 10px;
     cursor: pointer;
+    font-family: 'Space Grotesk', sans-serif;
 }
