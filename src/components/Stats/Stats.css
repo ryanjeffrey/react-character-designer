@@ -1,0 +1,13 @@
+p {
+    margin: 0;
+    font-size: .8em;
+}
+
+h3 {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.stats {
+    margin-left: 120px;
+}
