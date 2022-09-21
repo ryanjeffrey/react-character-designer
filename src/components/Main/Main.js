@@ -18,15 +18,15 @@ export default function Main() {
   const handleChange = (type, value) => {
     if (type === 'helmet'){
       setHelmet(value);
-      setHelmetCount(helmetCount + 1);
+      setHelmetCount((prevState) => prevState + 1);
     }
     if (type === 'jersey'){
       setJersey(value);
-      setJerseyCount(jerseyCount + 1);
+      setJerseyCount((prevState) => prevState + 1);
     }
     if (type === 'pants'){
       setPants(value);
-      setPantsCount(pantsCount + 1);
+      setPantsCount((prevState) => prevState + 1);
     }
   };
 
